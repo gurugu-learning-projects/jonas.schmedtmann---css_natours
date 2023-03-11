@@ -2,7 +2,7 @@
 0 - 600px     : phone
 600 - 900px   : tablet portrait
 900 - 1200px  : tablet landscape
-1200 - 1800px : our normal styles
+1200 - 1400px : medium desktop
 1800+         : big desktop
 
 $breakpoint argument choices:
@@ -499,6 +499,9 @@ body {
   width: 90%;
   display: block;
   transition: all 0.3s; }
+  @media (max-width: 56.25em) {
+    .form__input {
+      width: 100%; } }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -524,6 +527,10 @@ body {
 .form__radio-group {
   width: 49%;
   display: inline-block; }
+  @media (max-width: 56.25em) {
+    .form__radio-group {
+      width: 100%;
+      margin-bottom: 2rem; } }
 
 .form__radio-input {
   display: none; }
@@ -607,14 +614,29 @@ body {
   .popup__left {
     width: 33.333333%;
     display: table-cell; }
+    @media (max-width: 87.5em) {
+      .popup__left {
+        display: block;
+        width: 100%;
+        overflow: hidden; } }
   .popup__right {
     width: 66.666667%;
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }
+    @media (max-width: 87.5em) {
+      .popup__right {
+        display: block;
+        width: 100%; } }
   .popup__img {
     display: block;
     width: 100%; }
+    @media (max-width: 87.5em) {
+      .popup__img--one {
+        width: 50.8%;
+        float: left; }
+      .popup__img--two {
+        width: 49.2%; } }
   .popup__text {
     font-size: 1.4rem;
     margin-bottom: 4rem;
@@ -918,8 +940,20 @@ body {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
   background-size: 100%;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
-  height: 50rem; }
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+  @media (max-width: 75em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/nat-10.jpg);
+      background-size: cover; } }
+  @media (max-width: 56.25em) {
+    .book {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../img/nat-10.jpg); } }
   .book__form {
     width: 50%;
     padding: 6rem; }
+    @media (max-width: 75em) {
+      .book__form {
+        width: 65%; } }
+    @media (max-width: 56.25em) {
+      .book__form {
+        width: 100%; } }
